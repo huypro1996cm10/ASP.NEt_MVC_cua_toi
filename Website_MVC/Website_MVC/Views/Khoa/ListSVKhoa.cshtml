@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Website_MVC.Models.SINHVIEN>
+
+@{
+    ViewBag.Title = "ListSVKhoa";
+}
+
+<h2>ListSVKhoa</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKhoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Namsinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quequan)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKhoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Namsinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quequan)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { MaKhoa = item.MaKhoa }) |
+            @Html.ActionLink("Details", "Details", new { MaKhoa = item.MaKhoa }) |
+            @Html.ActionLink("Delete", "Delete", new { MaKhoa = item.MaKhoa })
+
+        </td>
+    </tr>
+}
+
+</table>

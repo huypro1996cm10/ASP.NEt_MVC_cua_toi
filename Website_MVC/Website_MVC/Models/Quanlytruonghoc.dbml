@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Quanlytruonghoc" Class="QuanlytruonghocDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=may-37\;Initial Catalog=Quanlytruonghoc;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QuanlytruonghocConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GIANGVIEN" Member="GIANGVIENs">
+    <Type Name="GIANGVIEN">
+      <Column Name="MaGV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hoten" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaKhoa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GIANGVIEN_KHOA" Member="KHOAs" ThisKey="MaKhoa" OtherKey="Makhoa" Type="KHOA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHOA" Member="KHOAs">
+    <Type Name="KHOA">
+      <Column Name="Makhoa" Type="System.Int32" DbType="Int" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="Tenkhoa" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Dienthoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GIANGVIEN_KHOA" Member="GIANGVIEN" ThisKey="Makhoa" OtherKey="MaKhoa" Type="GIANGVIEN" IsForeignKey="true" />
+      <Association Name="SINHVIEN_KHOA" Member="SINHVIEN" ThisKey="Makhoa" OtherKey="MaKhoa" Type="SINHVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SINHVIEN" Member="SINHVIENs">
+    <Type Name="SINHVIEN">
+      <Column Name="MaSV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hoten" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MaKhoa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Namsinh" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quequan" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="SINHVIEN_KHOA" Member="KHOAs" ThisKey="MaKhoa" OtherKey="Makhoa" Type="KHOA" />
+    </Type>
+  </Table>
+</Database>

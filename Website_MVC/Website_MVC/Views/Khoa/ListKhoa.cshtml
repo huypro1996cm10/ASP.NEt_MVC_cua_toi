@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Website_MVC.Models.KHOA>
+
+@{
+    ViewBag.Title = "ListKhoa";
+}
+
+<h2>ListKhoa</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Makhoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tenkhoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dienthoai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Makhoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tenkhoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dienthoai)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { MaKhoa = item.Makhoa }) |
+            @Html.ActionLink("Details", "Details", new { MaKhoa = item.Makhoa }) |
+            @Html.ActionLink("Delete", "Delete", new { MaKhoa = item.Makhoa }) |
+            @Html.ActionLink("Xem sinh viên", "ListSVKhoa", new { MaKhoa = item.Makhoa })
+        </td>
+    </tr>
+}
+
+</table>

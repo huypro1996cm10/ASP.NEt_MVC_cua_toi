@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Website_MVC.Models.SINHVIEN>
+
+@{
+    ViewBag.Title = "ListSV";
+}
+
+<h2>ListSV</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<form>
+    <p>
+        Năm sinh từ <input name="minYear" type="text" />
+        Đến <input name="maxYear" type="text" />
+        <input type="submit" name="submit" />
+    </p>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKhoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Namsinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quequan)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKhoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Namsinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quequan)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model Website_MVC.Models.KHOA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KHOA</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Makhoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Makhoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenkhoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenkhoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dienthoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dienthoai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

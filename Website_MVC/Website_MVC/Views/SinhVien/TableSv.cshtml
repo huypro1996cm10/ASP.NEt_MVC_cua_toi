@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Danh sach SV";
+}
+<html>
+<head>
+    <title>DS SINHVIEN</title>
+    <style>
+        table, th, td {
+           margin: 0px auto;
+           padding:10px;
+           border:3px solid black;
+           text-align:center;
+        }
+    </style>
+</head>
+<body>
+<h2>TableSv</h2>
+    <form>
+        <p>
+            Năm sinh từ <input name="minYear" type="text" />
+            Đến <input name="maxYear" type="text"/>
+            <input type="submit" name="submit"/>
+        </p>
+    </form>
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>Mã SV</th>
+            <th>Họ tên</th>
+            <th>Năm sinh</th>
+            <th>Quê quán</th>
+            <th>Khoa</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@item.MaSV</td>
+                <td>@item.Hoten</td>
+                <td>@item.Namsinh</td>
+                <td>@item.Quequan</td>
+                <td>@item.MaKhoa</td>
+            </tr>
+        </tbody>
+    }
+</table>
+</body>
+</html>

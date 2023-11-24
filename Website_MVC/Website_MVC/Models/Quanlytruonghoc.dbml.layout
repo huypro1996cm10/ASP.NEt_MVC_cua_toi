@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Quanlytruonghoc">
+  <DataContextMoniker Name="/QuanlytruonghocDataContext" />
+  <nestedChildShapes>
+    <classShape Id="045ad883-0aef-4358-afd1-ff83e92279cc" absoluteBounds="0.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QuanlytruonghocDataContext/GIANGVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5bad1438-12c9-4d32-bc2a-03631a2ce509" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c741a27f-096d-479e-b016-ee764e18c193" absoluteBounds="3.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/QuanlytruonghocDataContext/KHOA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6b38148-f0b7-41e7-9fcb-6a03057c5c89" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ecbec6c-63aa-4bd5-b3fd-03ffe2db85c6" absoluteBounds="1.25, 3.625, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/QuanlytruonghocDataContext/SINHVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a38b604-aac4-4e77-970d-5a77bb06a061" absoluteBounds="1.2650000000000001, 4.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.44314697265625); (3.75 : 1.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QuanlytruonghocDataContext/GIANGVIEN/GIANGVIEN_KHOA" />
+      <nodes>
+        <classShapeMoniker Id="045ad883-0aef-4358-afd1-ff83e92279cc" />
+        <classShapeMoniker Id="c741a27f-096d-479e-b016-ee764e18c193" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.25 : 4.51044840494792); (4.75 : 4.51044840494792); (4.75 : 2.1362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QuanlytruonghocDataContext/SINHVIEN/SINHVIEN_KHOA" />
+      <nodes>
+        <classShapeMoniker Id="6ecbec6c-63aa-4bd5-b3fd-03ffe2db85c6" />
+        <classShapeMoniker Id="c741a27f-096d-479e-b016-ee764e18c193" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
